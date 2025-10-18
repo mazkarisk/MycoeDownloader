@@ -36,7 +36,7 @@ import util.Logger;
 
 class JMycoeDownloaderFrame extends JFrame {
 
-	private static final String TITLE = "MycoeDownloader ver.3 (2024/07/25)";
+	private static final String TITLE = "MycoeDownloader v3.1";
 	private static final String SYSTEM_VER = "1";
 
 	// 各ペイン
@@ -101,15 +101,6 @@ class JMycoeDownloaderFrame extends JFrame {
 		sb.append("MYCOEIROINKを利用する前に、<font color='red' size = '7'>絶対に</font>そのMYCOEIROINKの利用規約を確認の上同意してください。<br>");
 		sb.append("一般的に、<font color='red'>音声合成ソフトウェアの利用規約は読み飛ばされることを想定していません</font>。<br>");
 		sb.append("<br>");
-		sb.append("不明点や改善要望などありましたら、このソフトウェアの入手元までお願いします。<br>");
-		sb.append("このソフトウェアの入手元が「まつかりすく」名義である場合、問い合わせ先は以下の通りです。<br>");
-		sb.append("　① X(旧Twitter)の「@mazkarisk」<br>");
-		sb.append("　② X(旧Twitter)の「@mazkariskpr」<br>");
-		sb.append("　③ ぼすきーの「@mazkarisk」<br>");
-		sb.append("　④ Blueskyの「@mazkarisk.bsky.social」<br>");
-		sb.append("　⑤ そのほか、「mazkarisk」あるいは「まつかりすく」名義のアカウント<br>");
-		sb.append("　※上記は「よく通知を見る順」です。メンションやDMなど、連絡方法は問いません。<br>");
-		sb.append("<br>");
 		sb.append("上記を理解の上、ご利用ください。");
 		sb.append("</html>");
 
@@ -122,7 +113,7 @@ class JMycoeDownloaderFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		addWindowListener(new MycoeWindowAdapter(this));
 		setTitle(TITLE);
-		setSize(960, 540);
+		setSize(1000, 500);
 
 		// ヘッダーパネルをスクロールペインでラップ
 		headerScrollPane = new JScrollPane(initializeHeaderPane());
