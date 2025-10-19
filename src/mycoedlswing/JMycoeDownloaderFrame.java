@@ -621,7 +621,7 @@ class JMycoeDownloaderFrame extends JFrame {
 			Files.write(Paths.get(newMetasJsonPath), newMetasJsonString.getBytes(StandardCharsets.UTF_8));
 
 			// 完了メッセージの表示
-			showInformationMessage("<html>処理が完了しました。COEIROINKを起動してスタイルを確認してください。<br>問題があれば、本ソフトウェアの起動時に表示される連絡先に問い合わせてください。</html>");
+			showInformationMessage("<html>処理が完了しました。COEIROINKを起動してスタイルを確認してください。<br>問題があれば、本ソフトウェアの配布元に問い合わせてください。</html>");
 
 			// 一時フォルダを削除
 			final File tempDir = new File(textFieldTempDirDest.getText(), "temp");
