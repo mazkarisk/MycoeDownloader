@@ -36,7 +36,7 @@ import util.Logger;
 
 class JMycoeDownloaderFrame extends JFrame {
 
-	private static final String TITLE = "MycoeDownloader v3.1";
+	private static final String TITLE = "MycoeDownloader v.3.1.0";
 	private static final String SYSTEM_VER = "1";
 
 	// 各ペイン
