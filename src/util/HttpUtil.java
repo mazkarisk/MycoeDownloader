@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
@@ -19,7 +20,7 @@ public class HttpUtil {
 	static public String downloadFileFromUrlAsString(String urlString) throws IOException {
 		urlString = urlString.replaceAll("&dl=0", "&dl=1"); // Dropbox向けに、DL設定に変更
 
-		final URL url = new URL(urlString);
+		final URL url = URI.create(urlString).toURL();
 
 		// コネクションを作成し実行する
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();

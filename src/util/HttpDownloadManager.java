@@ -6,6 +6,7 @@ import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 import java.nio.file.Path;
 import java.util.List;
@@ -93,7 +94,7 @@ public class HttpDownloadManager implements AutoCloseable {
 
 		try {
 			urlString = urlString.replaceAll("&dl=0", "&dl=1"); // Dropbox向けに、DL設定に変更
-			final URL url = new URL(urlString);
+			final URL url = URI.create(urlString).toURL();
 
 			Logger.put("DL開始 urlString : " + urlString);
 
