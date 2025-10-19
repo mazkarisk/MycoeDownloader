@@ -89,17 +89,11 @@ class JMycoeDownloaderFrame extends JFrame {
 		// ウェルカムメッセージ
 		final StringBuilder sb = new StringBuilder();
 		sb.append("<html>");
-		sb.append("2024年7月25日現在、通常のMYCOEIROINKは利用者が手動でダウンロードし、必要に応じてスタイルの統合作業などを行う必要があります。<br>");
-		sb.append("このソフトウェアは、特定のMYCOEIROINKについてダウンロードとスタイル統合作業を自動化するものです。<br>");
-		sb.append("利用したいMYCOEIROINKの配布ページなどでこのソフトウェアについての記載がある場合のみ、このソフトウェアでのダウンロードが可能です。<br>");
-		sb.append("<font color='red'>ほとんどのMYCOEIROINK配布者はこのソフトウェアの存在すら知らないはずです。<br>");
-		sb.append("MYCOEIROINK配布者へ「あなたのMYCOEIROINKをこのソフトウェアで利用したいので方法を教えて」などと問い合わせないようお願いします。</font><br>");
+		sb.append("MYCOEIROINKを利用する前に、<font color='red' size = '7'>絶対に</font>そのMYCOEIROINKの利用規約を確認の上同意してください。<br>");
+		sb.append("一般的に、<font color='red'>音声合成ソフトウェアの利用規約は読み飛ばされることを想定していません</font>。<br>");
 		sb.append("<br>");
 		sb.append("このソフトウェアは自己責任でご利用ください。<br>");
 		sb.append("ディスク容量に余裕があれば、利用前に\"speaker_info\"フォルダのバックアップを取っておくことを推奨します。<br>");
-		sb.append("<br>");
-		sb.append("MYCOEIROINKを利用する前に、<font color='red' size = '7'>絶対に</font>そのMYCOEIROINKの利用規約を確認の上同意してください。<br>");
-		sb.append("一般的に、<font color='red'>音声合成ソフトウェアの利用規約は読み飛ばされることを想定していません</font>。<br>");
 		sb.append("<br>");
 		sb.append("上記を理解の上、ご利用ください。");
 		sb.append("</html>");
@@ -114,6 +108,10 @@ class JMycoeDownloaderFrame extends JFrame {
 		addWindowListener(new MycoeWindowAdapter(this));
 		setTitle(TITLE);
 		setSize(1000, 500);
+
+		// アイコン設定
+		ImageIcon icon = new ImageIcon("./mycoedl/icon.png");
+	    setIconImage(icon.getImage());
 
 		// ヘッダーパネルをスクロールペインでラップ
 		headerScrollPane = new JScrollPane(initializeHeaderPane());
